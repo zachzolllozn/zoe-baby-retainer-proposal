@@ -8,35 +8,41 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <!-- Chosen Palette: Soft & Inviting Neutrals with Emerald Accents -->
-    <!-- Application Structure Plan: A single-page document outlining a long-term IT support proposal for Zoe Baby under a monthly retainer. It includes sections for an overview of the retainer model, detailed key services, and the benefits of a continuous partnership. The design is clean and professional, using alternating background colors and clear typography for readability and visual separation. -->
+    <!-- Chosen Palette: Earth Tones (Cream, Dark Teal, Muted Green, Soft Peach, Taupe) -->
+    <!-- Application Structure Plan: A single-page document outlining a long-term IT support proposal for Zoe Baby under a monthly retainer. It includes sections for an overview of the retainer model, detailed key services, and the benefits of a continuous partnership. The design is clean and professional, using alternating background colors, clear typography, subtle borders, and now added shadows for readability and visual separation. -->
     <!-- Visualization & Content Choices: Content is presented using structured HTML (headings, paragraphs, lists) and styled with Tailwind CSS. Icons are used to visually represent service categories, making the information easily digestible for the client. No interactive elements or charts are included as the goal is a clear, static proposal document. Confirms NO SVG/Mermaid. -->
     <!-- CONFIRMATION: NO SVG graphics used. NO Mermaid JS used. -->
     <style>
         body {
             font-family: 'Inter', sans-serif;
-            background-color: #fafaf9; /* stone-50 */
+            background-color: #F5F2ED; /* Cream background */
             color: #44403c; /* stone-700 */
         }
         .section-title {
             font-size: 1.875rem; /* text-3xl */
             font-weight: 700;
-            color: #292524; /* stone-900 */
+            color: #1F6F6B; /* Dark Teal */
             margin-bottom: 1rem;
         }
         .section-subtitle {
             font-size: 1.125rem; /* text-lg */
-            color: #57534e; /* stone-600 */
+            color: #78716c; /* stone-600 */
             max-width: 48rem; /* max-w-2xl */
             margin-left: auto;
             margin-right: auto;
             margin-bottom: 2rem;
         }
+        .section-container {
+            border-radius: 0.75rem; /* rounded-xl */
+            margin-bottom: 2rem; /* Space between sections */
+            overflow: hidden; /* Ensures border-radius applies */
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05); /* Added shadow */
+        }
         .service-card {
             background-color: white;
             border-radius: 0.75rem; /* rounded-xl */
             padding: 1.5rem;
-            box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+            box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1); /* Subtle shadow for service cards */
             text-align: left;
             display: flex;
             align-items: flex-start;
@@ -44,7 +50,7 @@
         }
         .icon-box {
             font-size: 2.5rem; /* text-4xl */
-            color: #10b981; /* emerald-500 */ /* Accent color */
+            color: #99D5D2; /* Light Blue/Teal Accent */
             flex-shrink: 0;
         }
         ul {
@@ -54,168 +60,174 @@
         }
     </style>
 </head>
-<body class="bg-stone-50">
+<body class="bg-[#F5F2ED]">
 
-    <main>
-        <section id="hero" class="py-20 sm:py-28 text-center bg-stone-50 border-b border-t border-stone-200">
+    <main class="p-4">
+        <section id="hero" class="py-20 sm:py-28 text-center bg-white rounded-xl shadow-sm mb-8">
             <div class="container mx-auto px-4 sm:px-6 lg:px-8">
-                <h1 class="text-4xl md:text-5xl font-bold tracking-tight text-stone-900">Zoe Baby: Your Long-Term IT Partnership with Zollo Networking</h1>
-                <p class="mt-6 max-w-3xl mx-auto text-lg text-stone-600">Beyond initial setup, Zollo Networking offers comprehensive ongoing IT support designed to keep Zoe Baby's technology running smoothly, securely, and efficiently. Our monthly retainer model ensures predictable costs and proactive care.</p>
+                <h1 class="text-4xl md:text-5xl font-bold tracking-tight text-[#1F6F6B]">Zoe Baby: Your Long-Term IT Partnership with Zollo Networking</h1>
+                <p class="mt-6 max-w-3xl mx-auto text-lg text-[#44403c]">Beyond initial setup, Zollo Networking offers comprehensive ongoing IT support designed to keep Zoe Baby's technology running smoothly, securely, and efficiently. Our monthly retainer model ensures predictable costs and proactive care.</p>
             </div>
         </section>
 
-        <section id="retainer-overview" class="py-20 sm:py-28 bg-white border-b border-stone-200">
-            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="text-center">
-                    <h2 class="section-title">Understanding Our Monthly Retainer Model</h2>
-                    <p class="section-subtitle">Our monthly retainer provides Zoe Baby with consistent, proactive IT support and strategic guidance. Instead of reacting to issues as they arise, we partner with you to maintain optimal system health, enhance security, and support your team's productivity, all within a predictable budget.</p>
-                </div>
-                <div class="mt-12 grid grid-cols-1 md:grid-cols-3 gap-8">
-                    <div class="p-6 bg-stone-50 rounded-xl shadow-sm text-center">
-                        <div class="text-5xl mb-4">🗓️</div>
-                        <h3 class="font-bold text-xl text-stone-900 mb-2">Predictable Costs</h3>
-                        <p class="text-stone-600 text-sm">A fixed monthly fee simplifies budgeting and eliminates unexpected IT expenses.</p>
+        <div class="section-container">
+            <section id="retainer-overview" class="py-20 sm:py-28 bg-white">
+                <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                    <div class="text-center">
+                        <h2 class="section-title">Understanding Our Monthly Retainer Model</h2>
+                        <p class="section-subtitle">Our monthly retainer provides Zoe Baby with consistent, proactive IT support and strategic guidance. Instead of reacting to issues as they arise, we partner with you to maintain optimal system health, enhance security, and support your team's productivity, all within a predictable budget.</p>
                     </div>
-                    <div class="p-6 bg-stone-50 rounded-xl shadow-sm text-center">
-                        <div class="text-5xl mb-4">⏰</div>
-                        <h3 class="font-bold text-xl text-stone-900 mb-2">Proactive Management</h3>
-                        <p class="text-stone-600 text-sm">We monitor your systems, address potential issues before they become problems, and ensure continuous optimization.</p>
+                    <div class="mt-12 grid grid-cols-1 md:grid-cols-3 gap-8">
+                        <div class="p-6 bg-[#F5F2ED] rounded-xl shadow-sm text-center">
+                            <div class="text-5xl mb-4">🗓️</div>
+                            <h3 class="font-bold text-xl text-[#1F6F6B] mb-2">Predictable Costs</h3>
+                            <p class="text-[#44403c] text-sm">A fixed monthly fee simplifies budgeting and eliminates unexpected IT expenses.</p>
+                        </div>
+                        <div class="p-6 bg-[#F5F2ED] rounded-xl shadow-sm text-center">
+                            <div class="text-5xl mb-4">⏰</div>
+                            <h3 class="font-bold text-xl text-[#1F6F6B] mb-2">Proactive Management</h3>
+                            <p class="text-[#44403c] text-sm">We monitor your systems, address potential issues before they become problems, and ensure continuous optimization.</p>
+                        </div>
+                        <div class="p-6 bg-[#F5F2ED] rounded-xl shadow-sm text-center">
+                            <div class="text-5xl mb-4">🤝</div>
+                            <h3 class="font-bold text-xl text-[#1F6F6B] mb-2">Dedicated Partnership</h3>
+                            <p class="text-[#44403c] text-sm">You gain a trusted IT advisor who understands Zoe Baby's unique needs and goals.</p>
+                        </div>
                     </div>
-                    <div class="p-6 bg-stone-50 rounded-xl shadow-sm text-center">
-                        <div class="text-5xl mb-4">🤝</div>
-                        <h3 class="font-bold text-xl text-stone-900 mb-2">Dedicated Partnership</h3>
-                        <p class="text-stone-600 text-sm">You gain a trusted IT advisor who understands Zoe Baby's unique needs and goals.</p>
+                    <div class="mt-12 p-6 bg-[#E0B3A6] rounded-xl text-[#292524] text-center">
+                        <h3 class="font-bold text-xl mb-2">How Our Support Hours Work</h3>
+                        <p class="text-base">
+                            Each monthly retainer includes a pre-defined set of "no-questions-asked" support hours, clearly outlined in your contract. These hours are dedicated to proactive maintenance, general inquiries, and routine support tasks within the agreed scope.
+                        </p>
+                        <p class="mt-3 text-base">
+                            Should your needs exceed these included hours in any given month, additional support will be provided at a slightly higher, transparent hourly rate, ensuring you always have the coverage you need while maintaining cost control.
+                        </p>
                     </div>
                 </div>
-                <div class="mt-12 p-6 bg-emerald-50 rounded-xl text-emerald-800 text-center">
-                    <h3 class="font-bold text-xl mb-2">How Our Support Hours Work</h3>
-                    <p class="text-base">
-                        Each monthly retainer includes a pre-defined set of "no-questions-asked" support hours, clearly outlined in your contract. These hours are dedicated to proactive maintenance, general inquiries, and routine support tasks within the agreed scope.
-                    </p>
-                    <p class="mt-3 text-base">
-                        Should your needs exceed these included hours in any given month, additional support will be provided at a slightly higher, transparent hourly rate, ensuring you always have the coverage you need while maintaining cost control.
-                    </p>
-                </div>
-            </div>
-        </section>
+            </section>
+        </div>
 
-        <section id="key-services" class="py-20 sm:py-28 bg-stone-50 border-b border-stone-200">
-            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="text-center">
-                    <h2 class="section-title">Key Services Included in Your Monthly Retainer</h2>
-                    <p class="section-subtitle">Our retainer covers a wide range of essential IT services, ensuring comprehensive support for Zoe Baby's operations.</p>
+        <div class="section-container">
+            <section id="key-services" class="py-20 sm:py-28 bg-[#F5F2ED]">
+                <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                    <div class="text-center">
+                        <h2 class="section-title">Key Services Included in Your Monthly Retainer</h2>
+                        <p class="section-subtitle">Our retainer covers a wide range of essential IT services, ensuring comprehensive support for Zoe Baby's operations.</p>
+                    </div>
+                    <div class="mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                        <div class="service-card">
+                            <div class="icon-box">📧</div>
+                            <div>
+                                <h3 class="font-bold text-lg text-[#1F6F6B]">Google Workspace Management</h3>
+                                <ul class="text-[#44403c] text-sm mt-1 list-disc list-inside">
+                                    <li>User account provisioning & deprovisioning</li>
+                                    <li>Email and calendar support</li>
+                                    <li>Drive storage management & best practices</li>
+                                    <li>Security settings & compliance monitoring</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="service-card">
+                            <div class="icon-box">🔒</div>
+                            <div>
+                                <h3 class="font-bold text-lg text-[#1F6F6B]">Cybersecurity System Management</h3>
+                                <ul class="text-[#44403c] text-sm mt-1 list-disc list-inside">
+                                    <li>Firewall & network security monitoring</li>
+                                    <li>Antivirus/endpoint protection oversight</li>
+                                    <li>Vulnerability scanning & patch management assistance</li>
+                                    <li>Incident response planning & support</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="service-card">
+                            <div class="icon-box">📱</div>
+                            <div>
+                                <h3 class="font-bold text-lg text-[#1F6F6B]">Mosyle MDM Ongoing Management</h3>
+                                <ul class="text-[#44403c] text-sm mt-1 list-disc list-inside">
+                                    <li>Policy adjustments & optimization</li>
+                                    <li>Application deployment & updates</li>
+                                    
+                                    <li>Device compliance monitoring</li>
+                                    <li>Remote troubleshooting for managed devices</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="service-card">
+                            <div class="icon-box">💻</div>
+                            <div>
+                                <h3 class="font-bold text-lg text-[#1F6F6B]">New Computer Deployment Assistance</h3>
+                                <ul class="text-[#44403c] text-sm mt-1 list-disc list-inside">
+                                    <li>Seamless integration with Mosyle MDM</li>
+                                    <li>Software installation & configuration</li>
+                                    <li>User profile setup & data migration support</li>
+                                    <li>Ensuring optimal performance from day one</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="service-card">
+                            <div class="icon-box">☁️</div>
+                            <div>
+                                <h3 class="font-bold text-lg text-[#1F6F6B]">Cloud Systems Management</h3>
+                                <ul class="text-[#44403c] text-sm mt-1 list-disc list-inside">
+                                    <li>Monitoring & optimization of cloud resources</li>
+                                    <li>Access control & user permissions management</li>
+                                    <li>Data backup & recovery oversight</li>
+                                    <li>Vendor liaison for cloud services</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="service-card">
+                            <div class="icon-box">📞</div>
+                            <div>
+                                <h3 class="font-bold text-lg text-[#1F6F6B]">General IT Support & Consulting</h3>
+                                <ul class="text-[#44403c] text-sm mt-1 list-disc list-inside">
+                                    <li>Helpdesk support for designated key contacts</li>
+                                    <li>Strategic IT planning & technology roadmap development</li>
+                                    <li>Vendor management & procurement advice</li>
+                                    <li>Ongoing best practices recommendations</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                    <div class="service-card">
-                        <div class="icon-box">📧</div>
-                        <div>
-                            <h3 class="font-bold text-lg text-stone-900">Google Workspace Management</h3>
-                            <ul class="text-stone-600 text-sm mt-1 list-disc list-inside">
-                                <li>User account provisioning & deprovisioning</li>
-                                <li>Email and calendar support</li>
-                                <li>Drive storage management & best practices</li>
-                                <li>Security settings & compliance monitoring</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="service-card">
-                        <div class="icon-box">🔒</div>
-                        <div>
-                            <h3 class="font-bold text-lg text-stone-900">Cybersecurity System Management</h3>
-                            <ul class="text-stone-600 text-sm mt-1 list-disc list-inside">
-                                <li>Firewall & network security monitoring</li>
-                                <li>Antivirus/endpoint protection oversight</li>
-                                <li>Vulnerability scanning & patch management assistance</li>
-                                <li>Incident response planning & support</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="service-card">
-                        <div class="icon-box">📱</div>
-                        <div>
-                            <h3 class="font-bold text-lg text-stone-900">Mosyle MDM Ongoing Management</h3>
-                            <ul class="text-stone-600 text-sm mt-1 list-disc list-inside">
-                                <li>Policy adjustments & optimization</li>
-                                <li>Application deployment & updates</li>
-                                
-                                <li>Device compliance monitoring</li>
-                                <li>Remote troubleshooting for managed devices</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="service-card">
-                        <div class="icon-box">💻</div>
-                        <div>
-                            <h3 class="font-bold text-lg text-stone-900">New Computer Deployment Assistance</h3>
-                            <ul class="text-stone-600 text-sm mt-1 list-disc list-inside">
-                                <li>Seamless integration with Mosyle MDM</li>
-                                <li>Software installation & configuration</li>
-                                <li>User profile setup & data migration support</li>
-                                <li>Ensuring optimal performance from day one</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="service-card">
-                        <div class="icon-box">☁️</div>
-                        <div>
-                            <h3 class="font-bold text-lg text-stone-900">Cloud Systems Management</h3>
-                            <ul class="text-stone-600 text-sm mt-1 list-disc list-inside">
-                                <li>Monitoring & optimization of cloud resources</li>
-                                <li>Access control & user permissions management</li>
-                                <li>Data backup & recovery oversight</li>
-                                <li>Vendor liaison for cloud services</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="service-card">
-                        <div class="icon-box">📞</div>
-                        <div>
-                            <h3 class="font-bold text-lg text-stone-900">General IT Support & Consulting</h3>
-                            <ul class="text-stone-600 text-sm mt-1 list-disc list-inside">
-                                <li>Helpdesk support for designated key contacts</li>
-                                <li>Strategic IT planning & technology roadmap development</li>
-                                <li>Vendor management & procurement advice</li>
-                                <li>Ongoing best practices recommendations</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
+            </section>
+        </div>
 
-        <section id="partnership-benefits" class="py-20 sm:py-28 bg-white border-t border-stone-200">
-            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="text-center">
-                    <h2 class="section-title">Benefits of a Long-Term IT Partnership for Zoe Baby</h2>
-                    <p class="section-subtitle">Partnering with Zollo Networking for your ongoing IT needs translates into significant advantages for Zoe Baby, allowing you to focus on your core business of empowering parents.</p>
+        <div class="section-container">
+            <section id="partnership-benefits" class="py-20 sm:py-28 bg-white">
+                <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                    <div class="text-center">
+                        <h2 class="section-title">Benefits of a Long-Term IT Partnership for Zoe Baby</h2>
+                        <p class="section-subtitle">Partnering with Zollo Networking for your ongoing IT needs translates into significant advantages for Zoe Baby, allowing you to focus on your core business of empowering parents.</p>
+                    </div>
+                    <div class="mt-12 grid grid-cols-1 md:grid-cols-2 gap-8">
+                        <div class="p-6 bg-[#F5F2ED] rounded-xl shadow-sm text-center">
+                            <div class="text-5xl mb-4">📈</div>
+                            <h3 class="font-bold text-xl text-[#1F6F6B] mb-2">Scalability & Growth</h3>
+                            <p class="text-[#44403c] text-sm">Our flexible support scales with Zoe Baby's growth, ensuring your IT infrastructure always meets your evolving needs.</p>
+                        </div>
+                        <div class="p-6 bg-[#F5F2ED] rounded-xl shadow-sm text-center">
+                            <div class="text-5xl mb-4">🎯</div>
+                            <h3 class="font-bold text-xl text-[#1F6F6B] mb-2">Focus on Core Business</h3>
+                            <p class="text-[#44403c] text-sm">Delegate IT complexities to us, freeing Zoe Baby's team to concentrate on product innovation and customer satisfaction.</p>
+                        </div>
+                        <div class="p-6 bg-[#F5F2ED] rounded-xl shadow-sm text-center">
+                            <div class="text-5xl mb-4">💰</div>
+                            <h3 class="font-bold text-xl text-[#1F6F6B] mb-2">Optimized IT Spend</h3>
+                            <p class="text-[#44403c] text-sm">Predictable monthly costs and proactive maintenance help optimize your IT budget and avoid costly emergencies.</p>
+                        </div>
+                        <div class="p-6 bg-[#F5F2ED] rounded-xl shadow-sm text-center">
+                            <div class="text-5xl mb-4">✨</div>
+                            <h3 class="font-bold text-xl text-[#1F6F6B] mb-2">Enhanced Productivity</h3>
+                            <p class="text-[#44403c] text-sm">Reliable systems and prompt support minimize downtime, keeping Zoe Baby's team productive and efficient.</p>
+                        </div>
+                    </div>
                 </div>
-                <div class="mt-12 grid grid-cols-1 md:grid-cols-2 gap-8">
-                    <div class="p-6 bg-stone-50 rounded-xl shadow-sm text-center">
-                        <div class="text-5xl mb-4">📈</div>
-                        <h3 class="font-bold text-xl text-stone-900 mb-2">Scalability & Growth</h3>
-                        <p class="text-stone-600 text-sm">Our flexible support scales with Zoe Baby's growth, ensuring your IT infrastructure always meets your evolving needs.</p>
-                    </div>
-                    <div class="p-6 bg-stone-50 rounded-xl shadow-sm text-center">
-                        <div class="text-5xl mb-4">🎯</div>
-                        <h3 class="font-bold text-xl text-stone-900 mb-2">Focus on Core Business</h3>
-                        <p class="text-stone-600 text-sm">Delegate IT complexities to us, freeing Zoe Baby's team to concentrate on product innovation and customer satisfaction.</p>
-                    </div>
-                    <div class="p-6 bg-stone-50 rounded-xl shadow-sm text-center">
-                        <div class="text-5xl mb-4">💰</div>
-                        <h3 class="font-bold text-xl text-stone-900 mb-2">Optimized IT Spend</h3>
-                        <p class="text-stone-600 text-sm">Predictable monthly costs and proactive maintenance help optimize your IT budget and avoid costly emergencies.</p>
-                    </div>
-                    <div class="p-6 bg-stone-50 rounded-xl shadow-sm text-center">
-                        <div class="text-5xl mb-4">✨</div>
-                        <h3 class="font-bold text-xl text-stone-900 mb-2">Enhanced Productivity</h3>
-                        <p class="text-stone-600 text-sm">Reliable systems and prompt support minimize downtime, keeping Zoe Baby's team productive and efficient.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
+            </section>
+        </div>
     </main>
 
-    <footer class="bg-stone-800 text-stone-400 py-8 text-center text-sm">
+    <footer class="bg-[#1F6F6B] text-[#99D5D2] py-8 text-center text-sm">
         <p>&copy; 2025 Zollo Networking. Partnering for Zoe Baby's long-term success.</p>
     </footer>
 
